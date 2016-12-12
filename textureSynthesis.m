@@ -221,6 +221,14 @@ if (cmask(3) | cmask(4)),
       rparents = [];
       parents = [];
     end
+else
+    if (nsc<Nsc)
+      parents = zeros(cousinSz,Nor);
+      rparents = zeros(cousinSz,Nor*2);
+    else
+      rparents = [];
+      parents = [];
+    end
 end % if (cmask(3) | cmask(4))
 
 if cmask(3),
@@ -433,4 +441,5 @@ end %END  MAIN LOOP
 
 im = prev_im;
 
-snrP = [snr7 snr2 snr1 snr3 snr4 snr4r snr6];
+% snrP = [snr7 snr2 snr1 snr3 snr4 snr4r snr6];
+snrP = 'unimplemented; need to make this only return those snrs that exist';
