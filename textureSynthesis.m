@@ -84,7 +84,7 @@ la = (Na-1)/2;
 %% 3,  use the 3rd element to seed the random number generator.
 if ( length(im0) <= 3 )
   if ( length(im0) == 3)
-    randn('state', im0(3)); % Reset Seed
+    rng(im0(3), 'v5normal'); % Reset Seed
     im0 = im0(1:2);
   end
   im = mean0 + sqrt(var0)*randn(im0);
